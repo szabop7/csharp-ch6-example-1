@@ -1,7 +1,16 @@
 ﻿@page "/"
+@using Domain;
 
-<h1>Hello, world!</h1>
+<h1>Snake Eyes</h1>
+<div>
+    <Dice Pips="@_game.Eye1" />
+    <Dice Pips="@_game.Eye1" />
+</div>
+<p>
+    Score: @_game.Total
+</p>
 
-Welcome to your new app.
-
-<SurveyPrompt Title="How is Blazor working for you?" />
+@code {
+    private Game _game = new();
+    
+}
